@@ -49,16 +49,13 @@ jobs:
       - name: Install browsers for Playwright
         run: pnpm dlx playwright@1.44.0 install chromium
 
-      - name: Build project
-        run: pnpm run build
-
       - name: Install linux dependencies
         run: |
           sudo apt-get install --no-install-recommends -y \
           xvfb
 
       - name: Build project
-        run: pnpm run build
+        run: xvfb-run pnpm run build
 
       - name: Serve MetaMask Test Dapp
         run: |
