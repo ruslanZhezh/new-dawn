@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - new-dawn
+      - master
+      - main
   pull_request:
     paths:
       - '.github/actions/**/*.yml'
