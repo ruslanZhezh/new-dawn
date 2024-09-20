@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:cache": "synpress",
+    "build": "synpress",
     "build:cache:force": "synpress --force",
     "build:cache:headless": "synpress --headless",
     "serve:test-dapp": "serve node_modules/@metamask/test-dapp/dist -p 9999",

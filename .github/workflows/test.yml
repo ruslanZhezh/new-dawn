@@ -71,11 +71,11 @@ jobs:
         run: |
           xvfb-run pnpm run test:playwright:headful
 
-      - name: Archive Playwright report
-        uses: actions/upload-artifact@v3
-        if: success() || failure()
-        with:
-          name: playwright-report-headful
-          path: |
-            wallets/metamask/playwright-report-headful/
-          if-no-files-found: error
+      # - name: Archive Playwright report
+      #   uses: actions/upload-artifact@v3
+      #   if: success() || failure()
+      #   with:
+      #     name: playwright-report-headful
+      #     path: |
+      #       wallets/metamask/playwright-report-headful/
+      #     if-no-files-found: error
