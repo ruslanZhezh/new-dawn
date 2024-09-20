@@ -23,6 +23,8 @@ jobs:
       - name: Setup Node & Install dependencies
         uses: ./.github/actions/setup
 
+      - name: Playwright install
+        run: pnpm exec playwright install
       - name: Build project
         run: pnpm run build
 
@@ -43,7 +45,8 @@ jobs:
 
       - name: Install Playwright dependencies
         run: pnpm dlx playwright@1.44.0 install-deps
-
+      - name: Playwright install
+        run: pnpm exec playwright install
       # For now, we only need Chromium.
       - name: Install browsers for Playwright
         run: pnpm dlx playwright@1.44.0 install chromium
