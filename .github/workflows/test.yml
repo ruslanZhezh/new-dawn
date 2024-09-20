@@ -61,10 +61,6 @@ jobs:
         run: |
           pnpm run serve:test-dapp &
 
-      - name: Build cache
-        run: |
-          xvfb-run pnpm run build:cache
-
       - name: Run E2E tests (headful)
         run: |
           xvfb-run pnpm run test:playwright:headful
